@@ -2,8 +2,8 @@ package com.uma;
 
 public class MortgageCalculator {
 
-    public final static byte MONTHS_IN_YEAR = 12;
-    public final static byte PERCENT = 100;
+    private final static byte MONTHS_IN_YEAR = 12;
+    private final static byte PERCENT = 100;
 
     private int principal;
     private float annualInterestRate;
@@ -31,6 +31,13 @@ public class MortgageCalculator {
         return principal * (monthlyInterestRate * Math.pow(1 + monthlyInterestRate, numberOfPayments)) / (Math.pow(1 + monthlyInterestRate, numberOfPayments) - 1);
     }
 
+    public double[] getRemainingBalances(){
+        var balances = new double[getNumberOfPayments()];
+        for (short month = 1; month <= balances.length; month++)
+            balances[month - 1] = calculateBalance(month);
+        return balances;
+    }
+
     private float getMonthlyInterestRate() {
         return annualInterestRate / PERCENT / MONTHS_IN_YEAR;
     }
@@ -39,7 +46,4 @@ public class MortgageCalculator {
         return years * MONTHS_IN_YEAR;
     }
 
-    public byte getYears() {
-        return years;
-    }
 }
