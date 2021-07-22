@@ -1,14 +1,20 @@
 package com.uma;
 
-import com.uma.Generics.GenericList;
-import com.uma.Generics.List;
+//import com.uma.Generics.GenericList;
+//import com.uma.Generics.List;
 
 public class Main {
 
     public static void main(String[] args) {
 	    System.out.println("Hello World");
 
-        var list = new GenericList<Integer>();
+	    NumbersCalculation numbersCalculation = new NumbersCalculation();
+        numbersCalculation.addTwoNumbers();
+        numbersCalculation.subtractNumber();
+        numbersCalculation.multiplyNumbers();
+        numbersCalculation.divisionNumbers();
+
+        /*var list = new GenericList<Integer>();
         list.add(5);
         list.add(10);
 
@@ -20,7 +26,7 @@ public class Main {
 
          var report = new MortgageReport(calculator);
          report.printMortgage();
-         report.printPaymentSchedule();
+         report.printPaymentSchedule();*/
 
     }
 
