@@ -9,14 +9,11 @@ public class Main {
 	    System.out.println("Hello World");
 
 	    NumbersCalculation numbersCalculation = new NumbersCalculation();
-        numbersCalculation.addTwoNumbers();
-        numbersCalculation.subtractNumber();
-        numbersCalculation.multiplyNumbers();
-        numbersCalculation.divisionNumbers();
+	    numbersCalculation.getOption();
 
         /*var list = new GenericList<Integer>();
         list.add(5);
-        list.add(10);
+        list.add(10);*/
 
          int principal = (int) Console.readNumber("Principal($1K-1M): ", 1_000, 1_000_000);
          float annualInterestRate = (float) Console.readNumber("Annual Interest Rate: ", 1, 30);
@@ -26,7 +23,7 @@ public class Main {
 
          var report = new MortgageReport(calculator);
          report.printMortgage();
-         report.printPaymentSchedule();*/
+         report.printPaymentSchedule();
 
     }
 
