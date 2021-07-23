@@ -1,5 +1,6 @@
 package com.uma;
 
+import com.uma.Collections.CollectionDemo;
 import com.uma.Generics.GenericList;
 import com.uma.Generics.Instructor;
 import com.uma.Generics.User;
@@ -19,6 +20,8 @@ public class Main {
         for(var item : list )
             System.out.println(item);
 
+        // CollectionDemo class has been called here
+        CollectionDemo.show();
 
        /* var user1 = new User(50);
         var user2 = new User(20);
