@@ -2,6 +2,7 @@ package com.uma;
 
 import com.uma.Generics.GenericList;
 import com.uma.Generics.User;
+import com.uma.Generics.Utils;
 
 public class Main {
 
@@ -23,7 +24,16 @@ public class Main {
         else
             System.out.println("User1 > User2");
 
-	    /*NumbersCalculation numbersCalculation = new NumbersCalculation();
+        var max = Utils.max(23,4);
+        System.out.println("Maximum between two numbers: " + max);
+
+        var maxPoints = Utils.max(new User(56), new User(23));
+        System.out.println(maxPoints);
+
+        /* Calling multiple type parameter of Generic method*/
+        Utils.print(1,60);
+
+        NumbersCalculation numbersCalculation = new NumbersCalculation();
 	    numbersCalculation.getOption();
 
          int principal = (int) Console.readNumber("Principal($1K-1M): ", 1_000, 1_000_000);
@@ -34,7 +44,7 @@ public class Main {
 
          var report = new MortgageReport(calculator);
          report.printMortgage();
-         report.printPaymentSchedule();*/
+         report.printPaymentSchedule();
 
     }
 
