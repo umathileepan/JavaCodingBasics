@@ -1,6 +1,7 @@
 package com.uma;
 
 import com.uma.Generics.GenericList;
+import com.uma.Generics.Instructor;
 import com.uma.Generics.User;
 import com.uma.Generics.Utils;
 
@@ -15,7 +16,11 @@ public class Main {
         int num1 = list.get(0);
         System.out.println(num1);
 
-        var user1 = new User(50);
+        for(var item : list )
+            System.out.println(item);
+
+
+       /* var user1 = new User(50);
         var user2 = new User(20);
         if(user1.compareTo(user2) < 0)
             System.out.println("User1 < User2");
@@ -30,12 +35,17 @@ public class Main {
         var maxPoints = Utils.max(new User(56), new User(23));
         System.out.println(maxPoints);
 
-        /* Calling multiple type parameter of Generic method*/
+        //Calling multiple type parameter of Generic method
         Utils.print(1,60);
 
+        User user = new Instructor(20);
+        Utils.printUser(new Instructor(30));
+
+        // NumbersCalculation has been called to calculate the numbers are entered by you according to your choice of options.
         NumbersCalculation numbersCalculation = new NumbersCalculation();
 	    numbersCalculation.getOption();
 
+	    // MortgageCalculator class has been called here to calculate your mortgage.
          int principal = (int) Console.readNumber("Principal($1K-1M): ", 1_000, 1_000_000);
          float annualInterestRate = (float) Console.readNumber("Annual Interest Rate: ", 1, 30);
          byte years = (byte) Console.readNumber("Period (Years) : ", 1, 30);
@@ -45,7 +55,7 @@ public class Main {
          var report = new MortgageReport(calculator);
          report.printMortgage();
          report.printPaymentSchedule();
-
+        */
     }
 
 }
