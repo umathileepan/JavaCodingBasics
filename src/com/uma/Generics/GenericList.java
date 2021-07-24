@@ -26,6 +26,7 @@ public class GenericList<T> implements Iterable<T>{
         public ListIterator(GenericList<T> list){
             this.list = list;
         }
+
         @Override
         public boolean hasNext() {
             return (index < list.count);

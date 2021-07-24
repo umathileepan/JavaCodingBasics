@@ -1,6 +1,7 @@
 package com.uma;
 
 import com.uma.Collections.CollectionDemo;
+import com.uma.Collections.ListDemo;
 import com.uma.Generics.GenericList;
 import com.uma.Generics.Instructor;
 import com.uma.Generics.User;
@@ -10,6 +11,9 @@ public class Main {
 
     public static void main(String[] args) {
 	    System.out.println("Hello World");
+
+	    //List class has been called here
+        ListDemo.show();
 
         var list = new GenericList<Integer>();
         list.add(5);
