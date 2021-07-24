@@ -1,9 +1,6 @@
 package com.uma;
 
-import com.uma.Collections.CollectionDemo;
-import com.uma.Collections.Customer;
-import com.uma.Collections.ListDemo;
-import com.uma.Collections.QueueDemo;
+import com.uma.Collections.*;
 import com.uma.Generics.GenericList;
 import com.uma.Generics.Instructor;
 import com.uma.Generics.User;
@@ -17,9 +14,12 @@ public class Main {
 
     public static void main(String[] args) {
 	    System.out.println("Hello World");
-
+        //SetDemo class has been created
+        SetDemo.show();
+        
 	    //QueueDemo class has been called here
         QueueDemo.show();
+        
 	    //Customer class
         Customer.showCustomer();
 
