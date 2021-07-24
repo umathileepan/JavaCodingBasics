@@ -1,16 +1,24 @@
 package com.uma;
 
 import com.uma.Collections.CollectionDemo;
+import com.uma.Collections.Customer;
 import com.uma.Collections.ListDemo;
 import com.uma.Generics.GenericList;
 import com.uma.Generics.Instructor;
 import com.uma.Generics.User;
 import com.uma.Generics.Utils;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
 	    System.out.println("Hello World");
+
+	    //Customer class
+        Customer.showCustomer();
 
 	    //List class has been called here
         ListDemo.show();
