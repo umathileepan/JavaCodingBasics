@@ -13,7 +13,7 @@ public class CollectionDemo {
         collection.add("Strawberry");
         collection.add("Blueberry");
         for(var item : collection)
-            System.out.println(item);
+        System.out.println(item);
         System.out.println(collection.size());
         collection.remove("Orange");
         System.out.println(collection );

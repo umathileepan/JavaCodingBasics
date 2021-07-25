@@ -14,6 +14,9 @@ public class Main {
 
     public static void main(String[] args) {
 	    System.out.println("Hello World");
+	    //MapDemo class has been created to find the person to a given email
+        MapDemo.show();
+
         //SetDemo class has been created
         SetDemo.show();
         
