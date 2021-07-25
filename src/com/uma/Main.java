@@ -5,6 +5,7 @@ import com.uma.Generics.GenericList;
 import com.uma.Generics.Instructor;
 import com.uma.Generics.User;
 import com.uma.Generics.Utils;
+import com.uma.Lambdas.LambdasDemo;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -14,6 +15,10 @@ public class Main {
 
     public static void main(String[] args) {
 	    System.out.println("Hello World");
+	    
+	    //LambdasDemo - functional interface
+        LambdasDemo.show();
+
 	    //MapDemo class has been created to find the person to a given email
         MapDemo.show();
 
