@@ -6,6 +6,7 @@ import com.uma.Generics.Instructor;
 import com.uma.Generics.User;
 import com.uma.Generics.Utils;
 import com.uma.Lambdas.LambdasDemo;
+import com.uma.Streams.StreamDemo;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -15,7 +16,9 @@ public class Main {
 
     public static void main(String[] args) {
 	    System.out.println("Hello World");
-	    
+	    //Stream Demo
+        StreamDemo.show();
+	    /*
 	    //LambdasDemo - functional interface
         //Separate class demo
         LambdasDemo.show();
@@ -26,7 +29,6 @@ public class Main {
         //Lambda Expression Demo
         LambdasDemo.lambdaShow();
 
-	   /*
 	    //MapDemo class has been created to find the person to a given email
         MapDemo.show();
 
