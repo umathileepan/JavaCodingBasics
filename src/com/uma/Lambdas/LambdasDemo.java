@@ -1,9 +1,7 @@
 package com.uma.Lambdas;
 
 import java.util.List;
-import java.util.function.Consumer;
-import java.util.function.Function;
-import java.util.function.Supplier;
+import java.util.function.*;
 
 public class LambdasDemo{
     public static void show(){
@@ -35,6 +33,37 @@ public class LambdasDemo{
         Function<String, Integer> map = str -> str.length();
         var length = map.apply("Function");
         System.out.println(length);
+
+        //Composing Function
+        Function<String,String> replaceColon = str -> str.replace(":","=");
+        Function<String,String> addBraces = str -> "{" + str + "}";
+        var result = replaceColon.andThen(addBraces).apply("key:value");
+        System.out.println(result);
+
+        result = addBraces.compose(replaceColon).apply("id:name");
+        System.out.println(result);
+
+        //Predicate interface
+        Predicate<String> checkMore5 = str -> str.length() > 5;
+        System.out.println(checkMore5.test("Sky"));
+
+        Predicate<String> hasLeftBrace = str -> str.startsWith("{");
+        Predicate<String> hasRightBrace = str -> str.endsWith("}");
+        System.out.println(hasLeftBrace.and(hasRightBrace).test("{Key:Value}"));
+
+        //Binary Operator
+        BinaryOperator<Integer> add = (a , b) -> a + b;
+        var addResult = add.apply(45, 78);
+        System.out.println(addResult);
+
+        Function<Integer,Integer> square = a -> a*a;
+        var squareResult = square.apply(4);
+        System.out.println(squareResult);
+
+        UnaryOperator<Integer> squary = s -> s * s;
+        UnaryOperator<Integer> increment = n -> n + 1;
+        var unaryOps = increment.andThen(squary).apply(6);
+        System.out.println(unaryOps);
     }
 
     //Can create an anonymous inner class to execute interface without separate class
