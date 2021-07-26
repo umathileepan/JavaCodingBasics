@@ -17,8 +17,16 @@ public class Main {
 	    System.out.println("Hello World");
 	    
 	    //LambdasDemo - functional interface
+        //Separate class demo
         LambdasDemo.show();
 
+        //Anonymous class demo
+        LambdasDemo.anonymousInnerClassShow();
+
+        //Lambda Expression Demo
+        LambdasDemo.lambdaShow();
+
+	   /*
 	    //MapDemo class has been created to find the person to a given email
         MapDemo.show();
 
@@ -46,7 +54,7 @@ public class Main {
         // CollectionDemo class has been called here
         CollectionDemo.show();
 
-       /* var user1 = new User(50);
+        var user1 = new User(50);
         var user2 = new User(20);
         if(user1.compareTo(user2) < 0)
             System.out.println("User1 < User2");
@@ -81,7 +89,7 @@ public class Main {
          var report = new MortgageReport(calculator);
          report.printMortgage();
          report.printPaymentSchedule();
-        */
+         */
     }
 
 }
