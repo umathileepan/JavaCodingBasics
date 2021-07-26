@@ -1,8 +1,9 @@
 package com.uma.Lambdas;
 
 import java.util.List;
-import java.util.Locale;
 import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.function.Supplier;
 
 public class LambdasDemo{
     public static void show(){
@@ -18,12 +19,22 @@ public class LambdasDemo{
         //Declarative Programming
         list.forEach(item -> System.out.println(item));
 
-        //Consumer Chaining
+        //Consumer Chaining print lower and upper case string
         List<String> listStr = List.of("Consumer","Chaining","Interesting");
         Consumer<String> print = (item) -> System.out.println(item);
         Consumer<String> printUppercase = (item) -> System.out.println(item.toUpperCase());
 
         listStr.forEach(print.andThen(printUppercase));
+
+        //Supplier interface print random number
+        Supplier<Double> getRandom = () -> Math.random();
+        var randomNumber = getRandom.get();
+        System.out.println(randomNumber);
+
+        //Using Function interface
+        Function<String, Integer> map = str -> str.length();
+        var length = map.apply("Function");
+        System.out.println(length);
     }
 
     //Can create an anonymous inner class to execute interface without separate class
