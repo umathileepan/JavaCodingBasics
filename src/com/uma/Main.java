@@ -7,18 +7,19 @@ import com.uma.Generics.User;
 import com.uma.Generics.Utils;
 import com.uma.Lambdas.LambdasDemo;
 import com.uma.Streams.StreamDemo;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import com.uma.Streams.CreatingStreamsDemo;
 
 public class Main {
 
     public static void main(String[] args) {
 	    System.out.println("Hello World");
+
+	    //Creating and access Stream
+        CreatingStreamsDemo.show();
+
 	    //Stream Demo
         StreamDemo.show();
-	    /*
+
 	    //LambdasDemo - functional interface
         //Separate class demo
         LambdasDemo.show();
@@ -74,7 +75,7 @@ public class Main {
         //Calling multiple type parameter of Generic method
         Utils.print(1,60);
 
-        User user = new Instructor(20);
+        //User user = new Instructor(20);
         Utils.printUser(new Instructor(30));
 
         // NumbersCalculation has been called to calculate the numbers are entered by you according to your choice of options.
@@ -91,7 +92,6 @@ public class Main {
          var report = new MortgageReport(calculator);
          report.printMortgage();
          report.printPaymentSchedule();
-         */
     }
 
 }
