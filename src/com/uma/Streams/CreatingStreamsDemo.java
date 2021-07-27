@@ -17,5 +17,6 @@ public class CreatingStreamsDemo {
         //Flat map
         var streamList = Stream.of(List.of(1,2,3,4),List.of(3,4,5,6));
         streamList.flatMap(list -> list.stream()).forEach(n -> System.out.println(n));
+
     }
 }

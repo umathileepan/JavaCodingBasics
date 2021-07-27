@@ -1,12 +1,13 @@
 package com.uma.Streams;
 
+import java.util.Comparator;
 import java.util.List;
 
 public class StreamDemo {
     public static void show(){
-        List<Movie> movies = List.of(new Movie("a", 10),
-                                     new Movie("b",20),
-                                     new Movie("c",30));
+        List<Movie> movies = List.of(new Movie("The Crown", 10),
+                                     new Movie("BoldType",20),
+                                     new Movie("Suits",30));
         //Imperative programming
         int count = 0;
         for(var movie : movies)
@@ -31,5 +32,11 @@ public class StreamDemo {
 
         //Slicing stream - dropWhile
         movies.stream().dropWhile(m -> m.getLikes() < 30).forEach(m -> System.out.println(m.getTitle()));
+
+        //Sorting streams
+        movies.stream().sorted(Comparator.comparing(Movie::getTitle).reversed()).forEach(m -> System.out.println(m.getTitle()));
+
+        //Getting unique element
+        movies.stream().map(Movie::getLikes).distinct().forEach(System.out::println);
     }
 }
