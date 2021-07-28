@@ -2,6 +2,7 @@ package com.uma.Streams;
 
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Stream;
 
 public class StreamDemo {
     public static void show(){
@@ -38,5 +39,13 @@ public class StreamDemo {
 
         //Getting unique element
         movies.stream().map(Movie::getLikes).distinct().forEach(System.out::println);
+
+        //Peeking elements
+        movies.stream()
+                .filter(m -> m.getLikes() > 10)
+                .peek(m -> System.out.println("filtered " + m.getTitle()))
+                .map(Movie::getTitle)
+                .peek(t -> System.out.println("map " + t))
+                .forEach(m -> System.out.println(m));
     }
 }
