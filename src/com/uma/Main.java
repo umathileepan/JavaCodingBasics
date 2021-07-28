@@ -20,7 +20,7 @@ public class Main {
 	    //Stream Demo
         StreamDemo.show();
 
-	    //LambdasDemo - functional interface
+        //LambdasDemo - functional interface
         //Separate class demo
         LambdasDemo.show();
 
