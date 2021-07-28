@@ -1,6 +1,7 @@
 package com.uma;
 
 import com.uma.Collections.*;
+import com.uma.Concurrency.ThreadDemo;
 import com.uma.Generics.GenericList;
 import com.uma.Generics.Instructor;
 import com.uma.Generics.User;
@@ -13,6 +14,9 @@ public class Main {
 
     public static void main(String[] args) {
 	    System.out.println("Hello World");
+
+	    //Thread
+        ThreadDemo.show();
 
 	    //Creating and access Stream
         CreatingStreamsDemo.show();
