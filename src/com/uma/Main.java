@@ -15,10 +15,13 @@ public class Main {
     public static void main(String[] args) {
 	    System.out.println("Hello World");
 
+        System.out.println(Thread.activeCount());
+        System.out.println(Runtime.getRuntime().availableProcessors() );
+
 	    //Thread
         ThreadDemo.show();
 
-	    //Creating and access Stream
+	    /*//Creating and access Stream
         CreatingStreamsDemo.show();
 
 	    //Stream Demo
@@ -95,7 +98,7 @@ public class Main {
 
          var report = new MortgageReport(calculator);
          report.printMortgage();
-         report.printPaymentSchedule();
+         report.printPaymentSchedule();*/
     }
 
 }
