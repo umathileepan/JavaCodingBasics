@@ -16,12 +16,17 @@ public class DownloadFileTask implements Runnable{
         }
         */
 
-        //Cancelling a Thread - like canceling download
+        /*
+
+        //Interrupting or Cancelling a Thread - like canceling download
         for(int i = 0; i < Integer.MAX_VALUE; i++) {
             if(Thread.currentThread().isInterrupted()) return;
             System.out.println("Downloading byte: " + i);
         }
         System.out.println("Download complete: " + Thread.currentThread().getName());
+
+        */
+
     }
 
 }

@@ -19,10 +19,11 @@ public class ThreadDemo {
 
          */
 
-        //Interrupting a Thread
+
         Thread thread = new Thread();
         thread.start();
 
+        /*
         //Cancelling a Thread - like canceling download
         try {
             thread.sleep(2000);
@@ -31,6 +32,6 @@ public class ThreadDemo {
         }
 
         thread.interrupt();
-
+        */
     }
 }
