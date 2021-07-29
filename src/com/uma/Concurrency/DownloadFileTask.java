@@ -5,6 +5,7 @@ public class DownloadFileTask implements Runnable{
     public void run() {
         System.out.println("Downloading Files " + Thread.currentThread().getName());
 
+        /*
         //Pausing Thread
         try
         {
@@ -13,7 +14,13 @@ public class DownloadFileTask implements Runnable{
         catch (InterruptedException e) {
             e.printStackTrace();
         }
+        */
 
+        //Cancelling a Thread - like canceling download
+        for(int i = 0; i < Integer.MAX_VALUE; i++) {
+            if(Thread.currentThread().isInterrupted()) return;
+            System.out.println("Downloading byte: " + i);
+        }
         System.out.println("Download complete: " + Thread.currentThread().getName());
     }
 
